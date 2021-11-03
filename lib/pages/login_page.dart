@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:pruebaproye1/widgets/wid_inputs_login.dart';
-import 'package:pruebaproye1/widgets/wid_label.dart';
+import 'package:proyecto_tecnologias_moviles_2/widgets/wid_inputs_login.dart';
+import 'package:proyecto_tecnologias_moviles_2/widgets/wid_label.dart';
+
 
 class LoginPage extends StatelessWidget {
   const LoginPage({Key? key}) : super(key: key);
