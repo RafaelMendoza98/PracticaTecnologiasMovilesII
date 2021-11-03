@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-class CustomLogo extends StatelessWidget {
+class WidLogo extends StatelessWidget {
   final String texto;
-  const CustomLogo({
+  const WidLogo({
     Key? key,
     required this.texto,
   }) : super(key: key);
@@ -15,7 +15,7 @@ class CustomLogo extends StatelessWidget {
         margin: EdgeInsets.only(top: 40),
         child: Column(
           children: [
-            Image(image: AssetImage('assets/XXXVAniversario.png')),
+            Image(image: AssetImage('assets/logo.png')),
             SizedBox(
               height: 20,
             ),
