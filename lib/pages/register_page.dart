@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 import 'package:pruebaproye1/widgets/custom_button.dart';
 import 'package:pruebaproye1/widgets/custom_input.dart';
 import 'package:pruebaproye1/widgets/custom_label.dart';
+=======
+import 'package:proyecto_tecnologias_moviles_2/widgets/custom_button.dart';
+import 'package:proyecto_tecnologias_moviles_2/widgets/custom_input.dart';
+import 'package:proyecto_tecnologias_moviles_2/widgets/custom_label.dart';
+>>>>>>> 473459f0130e3e13ff5666142ab46698b3053e07
 
 import 'package:flutter/material.dart';
 
