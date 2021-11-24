@@ -1,6 +1,6 @@
-import 'package:pruebaproye1/widgets/custom_button.dart';
-import 'package:pruebaproye1/widgets/custom_input.dart';
-import 'package:pruebaproye1/widgets/custom_label.dart';
+import 'package:proyecto_tecnologias_moviles_2/widgets/wid_button.dart';
+import 'package:proyecto_tecnologias_moviles_2/widgets/wid_input.dart';
+import 'package:proyecto_tecnologias_moviles_2/widgets/wid_label.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatelessWidget {
@@ -19,10 +19,11 @@ class LoginPage extends StatelessWidget {
             child: Column(
               children: [
                 _Form(),
-                CustomLabel(
+                WidLabel(
                   texto: 'Crear Cuenta',
                   color: Colors.black87,
                   ruta: 'register',
+                  Texto: '',
                 ),
               ],
             ),
@@ -50,20 +51,20 @@ class __FormState extends State<_Form> {
       padding: EdgeInsets.symmetric(horizontal: 40),
       child: Column(
         children: [
-          CustomInput(
+          WidInput(
             icono: Icons.mail_outline,
             placeHolder: 'Email',
             keyboardType: TextInputType.emailAddress,
             textController: emailCtrl,
           ),
-          CustomInput(
+          WidInput(
             icono: Icons.lock_outline,
             placeHolder: 'Contraseña',
             keyboardType: TextInputType.text,
             textController: passCtrl,
             isPassword: true,
           ),
-          CustomButton(
+          WidButton(
               texto: 'Ingresar',
               onPressed: () {
                 Navigator.pushReplacementNamed(context, 'usuarios');

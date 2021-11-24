@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pruebaproye1/routes/routes.dart';
+import 'package:proyecto_tecnologias_moviles_2/routes/routes.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,8 +15,6 @@ class MyApp extends StatelessWidget {
       title: 'Game Store',
       initialRoute: 'login',
       routes: appRoutes,
-      
     );
   }
 }
-
