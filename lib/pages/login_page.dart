@@ -1,42 +1,75 @@
+import 'package:pruebaproye1/widgets/custom_button.dart';
+import 'package:pruebaproye1/widgets/custom_input.dart';
+import 'package:pruebaproye1/widgets/custom_label.dart';
 import 'package:flutter/material.dart';
-import 'package:proyecto_tecnologias_moviles_2/widgets/wid_inputs_login.dart';
-import 'package:proyecto_tecnologias_moviles_2/widgets/wid_label.dart';
-
 
 class LoginPage extends StatelessWidget {
   const LoginPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    final emailController = TextEditingController();
     return Scaffold(
-      backgroundColor: Color.fromARGB(50, 255, 224, 0),
+      backgroundColor: Color.fromRGBO(40, 40, 40, 1),
       body: SingleChildScrollView(
+        physics: BouncingScrollPhysics(),
         child: SafeArea(
           child: Container(
-            height: MediaQuery.of(context).size.height,
+            //Toda la pantalla
+            height: MediaQuery.of(context).size.height * .9,
             child: Column(
               children: [
-                WidLabel(Texto: 'iniciar sesion', color: Color.fromARGB(254, 200, 254, 1)
+                _Form(),
+                CustomLabel(
+                  texto: 'Crear Cuenta',
+                  color: Colors.black87,
+                  ruta: 'register',
                 ),
-                InputLogin(
-                  keyboardType: TextInputType.text, 
-                  icono: Icons.lock_outline, placeHolder: 'Email', 
-                  ispassword: false,
-                   textController: emailController
-                  ),
-                  
-                InputLogin(
-                  keyboardType: TextInputType.text, 
-                  icono: Icons.lock_outline, placeHolder: 'Password', 
-                  ispassword: true,
-                   textController: emailController
-                  ),
               ],
             ),
+          ),
         ),
-        ) ,
-        ),
+      ),
+    );
+  }
+}
+
+class _Form extends StatefulWidget {
+  _Form({Key? key}) : super(key: key);
+
+  @override
+  __FormState createState() => __FormState();
+}
+
+class __FormState extends State<_Form> {
+  final emailCtrl = TextEditingController();
+  final passCtrl = TextEditingController();
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: EdgeInsets.only(top: 20),
+      padding: EdgeInsets.symmetric(horizontal: 40),
+      child: Column(
+        children: [
+          CustomInput(
+            icono: Icons.mail_outline,
+            placeHolder: 'Email',
+            keyboardType: TextInputType.emailAddress,
+            textController: emailCtrl,
+          ),
+          CustomInput(
+            icono: Icons.lock_outline,
+            placeHolder: 'Contraseña',
+            keyboardType: TextInputType.text,
+            textController: passCtrl,
+            isPassword: true,
+          ),
+          CustomButton(
+              texto: 'Ingresar',
+              onPressed: () {
+                Navigator.pushReplacementNamed(context, 'usuarios');
+              })
+        ],
+      ),
     );
   }
 }

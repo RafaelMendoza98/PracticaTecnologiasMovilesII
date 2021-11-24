@@ -1,6 +1,7 @@
-import 'package:proyecto_tecnologias_moviles_2/widgets/wid_button.dart';
-import 'package:proyecto_tecnologias_moviles_2/widgets/wid_input.dart';
-import 'package:proyecto_tecnologias_moviles_2/widgets/wid_label.dart';
+import 'package:pruebaproye1/widgets/custom_button.dart';
+import 'package:pruebaproye1/widgets/custom_input.dart';
+import 'package:pruebaproye1/widgets/custom_label.dart';
+
 import 'package:flutter/material.dart';
 
 class RegisterPage extends StatelessWidget {
@@ -9,7 +10,7 @@ class RegisterPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromRGBO(40, 40, 40, 1),
+      backgroundColor: Colors.black87,
       body: SingleChildScrollView(
         physics: BouncingScrollPhysics(),
         child: SafeArea(
@@ -19,11 +20,10 @@ class RegisterPage extends StatelessWidget {
             child: Column(
               children: [
                 _Form(),
-                WidLabel(
+                CustomLabel(
                   texto: 'Crear Cuenta',
-                  color: Color.fromRGBO(146, 184, 31, 1),
+                  color: Colors.blue,
                   ruta: 'login',
-                  Texto: '',
                 ),
               ],
             ),
@@ -49,26 +49,26 @@ class __FormState extends State<_Form> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        WidInput(
+        CustomInput(
           icono: Icons.people_outline,
           placeHolder: 'Nombre',
           keyboardType: TextInputType.text,
           textController: nombreCtrl,
         ),
-        WidInput(
+        CustomInput(
           icono: Icons.mail_outline,
           placeHolder: 'Email',
           keyboardType: TextInputType.emailAddress,
           textController: emailCtrl,
         ),
-        WidInput(
+        CustomInput(
           icono: Icons.lock_outline,
           placeHolder: 'Contraseña',
           keyboardType: TextInputType.text,
           textController: passCtrl,
           isPassword: true,
         ),
-        WidButton(
+        CustomButton(
             texto: 'Registrar',
             onPressed: () {
               print(emailCtrl.text);
