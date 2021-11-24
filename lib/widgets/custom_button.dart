@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-class WidButton extends StatelessWidget {
+class CustomButton extends StatelessWidget {
   final String texto;
   final void Function() onPressed;
-  const WidButton({
+  const CustomButton({
     Key? key,
     required this.texto,
     required this.onPressed,

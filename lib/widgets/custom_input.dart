@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-class WidInput extends StatelessWidget {
+class CustomInput extends StatelessWidget {
   final TextInputType keyboardType;
   final IconData icono;
   final String placeHolder;
   final bool isPassword;
   final TextEditingController textController;
-  const WidInput({
+  const CustomInput({
     Key? key,
     this.keyboardType = TextInputType.text,
     required this.icono,
