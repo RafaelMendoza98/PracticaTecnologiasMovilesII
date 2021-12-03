@@ -15,12 +15,12 @@ class WidButton extends StatelessWidget {
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
           elevation: 2,
-          primary: Color.fromRGBO(146, 184, 31, 1),
+          primary: Color.fromRGBO(13, 20, 35, 1),
           shape: StadiumBorder(),
         ),
         onPressed: onPressed,
         child: Container(
-          height: 55,
+          height: 40,
           width: double.infinity,
           child: Center(
             child: Text(

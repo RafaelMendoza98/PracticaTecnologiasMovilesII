@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 
 class WidLabel extends StatelessWidget {
+  // ignore: non_constant_identifier_names
   final String Texto;
   final Color color;
   const WidLabel(
       {Key? key,
+      // ignore: non_constant_identifier_names
       required this.Texto,
       required this.color,
       String? texto,

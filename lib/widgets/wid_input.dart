@@ -21,7 +21,7 @@ class WidInput extends StatelessWidget {
       padding: EdgeInsets.only(top: 5, left: 5, bottom: 5, right: 15),
       margin: EdgeInsets.only(bottom: 15),
       decoration: BoxDecoration(
-          color: Color.fromRGBO(70, 70, 70, 1),
+          color: Color.fromRGBO(80, 87, 70, 1),
           borderRadius: BorderRadius.circular(20)),
       child: TextField(
         controller: textController,
@@ -33,7 +33,7 @@ class WidInput extends StatelessWidget {
         decoration: InputDecoration(
             prefixIcon: Icon(
               icono,
-              color: Color.fromRGBO(146, 184, 31, 1),
+              color: Color.fromRGBO(14, 15, 31, 1),
             ),
             focusedBorder: InputBorder.none,
             border: InputBorder.none,
